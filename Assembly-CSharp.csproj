@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DE8DFED3-4FCE-133A-1C91-33DAC243A963}</ProjectGuid>
+    <ProjectGuid>{A794297C-41C4-72A0-6392-FBDC88FF4885}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,9 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CSV2Table\Demo\C2TDemo.cs" />
+     <Compile Include="Assets\CSV2Table\Demo\SampleTable.cs" />
+     <Compile Include="Assets\CSV2Table\Scripts\CsvParser.cs" />
+     <Compile Include="Assets\CSV2Table\Scripts\CsvParser2.cs" />
+     <Compile Include="Assets\CSV2Table\Scripts\TableCodeGen.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\HangmanController.cs" />
      <Compile Include="Assets\Scripts\Util\Dictionary.cs" />
+     <Compile Include="Assets\Scripts\Util\GreQuestions.cs" />
      <Compile Include="Assets\Scripts\Util\TextUtils.cs" />
      <None Include="Assets\Resources\words.txt" />
  <Reference Include="UnityEngine.UI">
