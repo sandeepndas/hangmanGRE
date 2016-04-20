@@ -1,10 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Util\Dictionary.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Util\GreQuestions.cs">
     <Files>
-      <File FileName="Assets\Scripts\Util\GreQuestions.cs" Line="11" Column="7" />
-      <File FileName="Assets\Scripts\Util\Dictionary.cs" Line="65" Column="47" />
+      <File FileName="Assets\Scripts\Util\GreQuestions.cs" Line="17" Column="54" NotebookId="1" />
     </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="-32000" Y="-32000" Width="894" Height="999">
+        <Files>
+          <File FileName="Assets\Scripts\Util\Dictionary.cs" Line="30" Column="3" />
+          <File FileName="Assets\Scripts\GameController.cs" Line="204" Column="3" />
+          <File FileName="Assets\Scripts\HangmanController.cs" Line="48" Column="2" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

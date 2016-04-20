@@ -9,7 +9,8 @@ public class GameController : MonoBehaviour {
 	public Text lettesIndicator;
 	public Text statusIndicator;
 	public Text timeIndicator;
-	
+	public Text hint;
+		
 	
 	public HangmanController hangman;
 	private string word;
@@ -18,12 +19,16 @@ public class GameController : MonoBehaviour {
 	private bool completed;
 	private bool finalStatus;
 	private float initialTime;
+	private GreQuestions greQuestions;
+
+
 	
 	
 	// Use this for initialization
 	void Start () {
 	
 		hangman = GameObject.FindGameObjectWithTag("Player").GetComponent<HangmanController>();
+		greQuestions = gameObject.GetComponent<GreQuestions>();
 		reset();
 	}
 
@@ -79,24 +84,6 @@ public void updateGameStatus(bool finalStatus){
 	
 	}
 	
-	/*		
-	public bool gameStatus(){
-	
-			int complete = 0;
-			for(int i = 0;i < revealed.Length;i++){
-				if(revealed[i] != 0){
-						complete++;
-				}
-			}
-			
-		if (complete == word.Length) {
-			return true;
-		} else {
-			return false;
-		}
-
-}*/
-	
 	
 	public bool check(char c){
 		bool ret = false;
@@ -139,7 +126,8 @@ public void updateGameStatus(bool finalStatus){
 	public void next(){
 		hangman.reset();
 		completed = false;
-		setword(Dictionary.instance.next(0));
+		//setword(Dictionary.instance.next(0));
+		setword(greTest ());
 		statusIndicator.text = "";
 		initialTime = Time.time;
 	}
@@ -195,5 +183,14 @@ public void updateGameStatus(bool finalStatus){
 		timeIndicator.text = string.Format ("{0:00}:{1:00}", minutes, seconds);
 
 	}
-	
+
+	string greTest(){
+		int index = (int) (Random.value * greQuestions.NumRows());
+		Debug.Log (index);
+		string i = (string)index.ToString ();
+		Debug.Log (greQuestions.Find_id (i).Word);
+		hint.text = greQuestions.Find_id (i).Meaning;
+		return (greQuestions.Find_id (i).Word);
+
+	}
 }
